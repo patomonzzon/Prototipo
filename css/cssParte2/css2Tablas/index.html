@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header, footer {
+            background-color: #f76c5e;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            flex-shrink: 0;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .responsive-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .responsive-table th,
+        .responsive-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .responsive-table thead {
+            background-color: #f76c5e;
+            color: white;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .responsive-table th:nth-child(6),
+            .responsive-table td:nth-child(6) {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .responsive-table th:nth-child(5),
+            .responsive-table td:nth-child(5) {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .responsive-table th:nth-child(4),
+            .responsive-table td:nth-child(4) {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .responsive-table th:nth-child(3),
+            .responsive-table td:nth-child(3) {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabla de Cines</h1>
+    </header>
+
+    <main>
+        <table class="responsive-table">
+            <thead>
+                <tr>
+                    <th>Alimento</th>
+                    <th>Stock</th>
+                    <th>Precio por Unidad</th>
+                    <th>Peso</th>
+                    <th>Color</th>
+                    <th>Tienda</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Manzana</td>
+                    <td>150</td>
+                    <td>$1.20</td>
+                    <td>150g</td>
+                    <td>Rojo</td>
+                    <td>Frutería Don Pepe</td>
+                </tr>
+                <tr>
+                    <td>Banana</td>
+                    <td>200</td>
+                    <td>$0.50</td>
+                    <td>120g</td>
+                    <td>Amarillo</td>
+                    <td>Supermercado La Plaza</td>
+                </tr>
+                <tr>
+                    <td>Lechuga</td>
+                    <td>80</td>
+                    <td>$0.90</td>
+                    <td>500g</td>
+                    <td>Verde</td>
+                    <td>Frutería Don Pepe</td>
+                </tr>
+                <tr>
+                    <td>Zanahoria</td>
+                    <td>100</td>
+                    <td>$0.70</td>
+                    <td>200g</td>
+                    <td>Naranja</td>
+                    <td>Verdulería El Campo</td>
+                </tr>
+                <tr>
+                    <td>Tomate</td>
+                    <td>120</td>
+                    <td>$1.50</td>
+                    <td>250g</td>
+                    <td>Rojo</td>
+                    <td>Supermercado La Plaza</td>
+                </tr>
+                <tr>
+                    <td>Papa</td>
+                    <td>300</td>
+                    <td>$0.40</td>
+                    <td>180g</td>
+                    <td>Marrón</td>
+                    <td>Verdulería El Campo</td>
+                </tr>
+                <tr>
+                    <td>Fresas</td>
+                    <td>60</td>
+                    <td>$2.00</td>
+                    <td>250g</td>
+                    <td>Rojo</td>
+                    <td>Frutería Don Pepe</td>
+                </tr>
+                <tr>
+                    <td>Pepino</td>
+                    <td>90</td>
+                    <td>$0.80</td>
+                    <td>300g</td>
+                    <td>Verde</td>
+                    <td>Verdulería El Campo</td>
+                </tr>
+                <tr>
+                    <td>Cebolla</td>
+                    <td>130</td>
+                    <td>$0.60</td>
+                    <td>150g</td>
+                    <td>Blanco</td>
+                    <td>Supermercado La Plaza</td>
+                </tr>
+                <tr>
+                    <td>Uvas</td>
+                    <td>50</td>
+                    <td>$3.00</td>
+                    <td>500g</td>
+                    <td>Morado</td>
+                    <td>Frutería Don Pepe</td>
+                </tr>
+                <tr>
+                    <td>Frutillas</td>
+                    <td>150</td>
+                    <td>$1.20</td>
+                    <td>150g</td>
+                    <td>Rojo</td>
+                    <td>Frutería Don Pepe</td>
+                </tr>
+                <tr>
+                    <td>Limon</td>
+                    <td>200</td>
+                    <td>$0.50</td>
+                    <td>120g</td>
+                    <td>Amarillo</td>
+                    <td>Supermercado La Plaza</td>
+                </tr>
+                <tr>
+                    <td>Espinaca</td>
+                    <td>80</td>
+                    <td>$0.90</td>
+                    <td>500g</td>
+                    <td>Verde</td>
+                    <td>Frutería Don Pepe</td>
+                </tr>
+                <tr>
+                    <td>Naranjas</td>
+                    <td>100</td>
+                    <td>$0.70</td>
+                    <td>200g</td>
+                    <td>Naranja</td>
+                    <td>Verdulería El Campo</td>
+                </tr>
+                <tr>
+                    <td>Pimientos</td>
+                    <td>120</td>
+                    <td>$1.50</td>
+                    <td>250g</td>
+                    <td>Rojo</td>
+                    <td>Supermercado La Plaza</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>Gracias por visitarnos</p>
+    </footer>
+</body>
+</html>

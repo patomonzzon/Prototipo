@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #41054d;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #4b0850;
+            color: #ebd7f5;
+            text-align: center;
+            padding: 10px 0;
+            height: 100px;
+            flex-shrink: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        main {
+            padding: 130px 20px 70px; 
+            background-color: #ebd7f5;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .form-fields {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+            flex: 1;
+        }
+
+        .form-group {
+            background-color: #69266e;
+            color: #ebd7f5;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #41054d;
+            color: #ebd7f5;
+            flex-shrink: 0;
+        }
+
+        button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #69266e;
+            color: #ebd7f5;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        button:hover {
+            background-color: #905195;
+        }
+
+        @media (max-width: 600px) {
+            .form-actions {
+                flex-direction: column;
+            }
+
+            button {
+                margin: 5px 0;
+                width: 100%;
+            }
+        }
+
+        footer {
+            background-color: #41054d;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            height: 40px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Formulario para trabajar en Drivers</h1>
+    </header>
+
+    <main>
+        <form action="" class="form-container">
+            <div class="form-fields">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="apellido">1 Apellido:</label>
+                        <input type="text" id="apellido" name="apellido">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">2 Nombres:</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="contrasena">3 Contraseña:</label>
+                        <input type="password" id="contrasena" name="contrasena">
+                    </div>
+                    <div class="form-group">
+                        <label for="deshabilitado">4 Campo deshabilitado:</label>
+                        <input type="text" id="deshabilitado" name="deshabilitado" disabled value="valor deshabilitado">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">5 Fecha:</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
+                    <div class="form-group">
+                        <label for="dni">6 DNI:</label>
+                        <input type="text" id="dni" name="dni">
+                    </div>
+                    <div class="form-group">
+                        <label>7 Actividades extracurriculares:</label>
+                        <input type="checkbox" id="musica" name="musica">
+                        <label for="musica">Música</label>
+                        <input type="checkbox" id="pintura" name="pintura">
+                        <label for="pintura">Pintura artística</label>
+                    </div>
+                    <div class="form-group">
+                        <label>8 Sexo:</label>
+                        <input type="radio" id="masculino" name="sexo" value="masculino">
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" id="femenino" name="sexo" value="femenino">
+                        <label for="femenino">Femenino</label>
+                    </div>
+                    <div class="form-group">
+                        <label>9 Vacío:</label>
+                        <p>Vacio</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="estudios">10 Estudios cursados:</label>
+                        <select id="estudios" name="estudios">
+                            <option value="primarios">Primarios</option>
+                            <option value="secundarios">Secundarios</option>
+                            <option value="universitarios">Universitarios</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="area">11 Área de desempeño:</label>
+                        <select id="area" name="area">
+                            <option value="administracion">Administración</option>
+                            <option value="ventas">Ventas</option>
+                            <option value="soporte">Soporte</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="turno">12 Turno:</label>
+                        <select id="turno" name="turno">
+                            <option value="manana">Mañana</option>
+                            <option value="tarde">Tarde</option>
+                            <option value="noche">Noche</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>13 Conduce:</label>
+                        <input type="radio" id="si" name="conduce" value="si">
+                        <label for="si">Sí</label>
+                        <input type="radio" id="no" name="conduce" value="no">
+                        <label for="no">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit">Enviar</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>Pie de formulario</p>
+    </footer>
+</body>
+</html>
